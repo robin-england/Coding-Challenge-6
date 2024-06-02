@@ -52,4 +52,18 @@ class Ball{                 // Creates ball class
         ctx.clearRect(0,0,width,height)
         this.drawCircle()
     }
+
+// 5. Animation Logic:
+
+    startAnimation(){
+        setInterval(() => {
+            this.update()
+            this.draw()
+        }, 25)  // Updates at a smooth pace
+    }
  }
+
+let testball = new Ball(200, 160, 20, 2, 2, "red")  // Testball
+
+testball.drawCircle() // Initial drawing of ball
+testball.startAnimation()   // Starts animation of the ball
